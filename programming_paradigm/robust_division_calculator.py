@@ -2,14 +2,14 @@ def safe_divide(numerator, denominator):
     try:
         numerator = float(numerator)
         denominator = float(denominator)
-        y = numerator / denominator
+        result = numerator / denominator
     except ZeroDivisionError:
-        print("can't divide by zero")
+        print("Error: Cannot divide by zero.")
+        return None
     except ValueError:
-        print("not a number")
+        print("Error: Invalid number.")
+        return None
     else:
-        return y
+        return result
 
 
-x = safe_divide("er", 2)
-print(x)
